@@ -45,11 +45,10 @@ class CountriesTableViewController: UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
-        let continent = ["Asie","Afrique","Amerique","Europe"]
-        for cont in continent{
-            print(cont)
-        }
-        return ""
+        //let continent = ["Asie","Afrique","Amerique","Europe"]
+        /*for cont in continent{
+            print(cont) }*/
+        return countries[section].continent
     }
 
     /*
