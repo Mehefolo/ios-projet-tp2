@@ -10,9 +10,18 @@ import UIKit
 
 class CountriesTableViewController: UITableViewController {
     
+    let ContinentByName = Dictionary(grouping: countries) { (Country) -> String in
+        return Country.continent
+    }
+    
+    
     override func viewDidLoad() {
-        
-
+    
+        for (key, values) in ContinentByName{
+            print(key)
+            print(values)
+            print("-------------------------")
+        }
 
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
@@ -25,12 +34,13 @@ class CountriesTableViewController: UITableViewController {
 
     override func numberOfSections(in tableView: UITableView) -> Int {
         // #warning Incomplete implementation, return the number of sections
-        return 5
+        return ContinentByName.keys.count
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        // #warning Incomplete implementation, return the number of rows
-        return countries.count
+        
+        let valuesrows = ContinentByName.values.count
+        return valuesrows
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -40,15 +50,18 @@ class CountriesTableViewController: UITableViewController {
         cell.textLabel?.text = country.name
         cell.detailTextLabel?.text = country.isoCode
         cell.imageView?.image = UIImage(named: country.isoCode)
+            
+            
         return cell
         
     }
     
     override func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
-        //let continent = ["Asie","Afrique","Amerique","Europe"]
-        /*for cont in continent{
-            print(cont) }*/
-        return countries[section].continent
+       
+        for (key, _) in ContinentByName {
+            return key
+        }
+        return ""
     }
 
     /*

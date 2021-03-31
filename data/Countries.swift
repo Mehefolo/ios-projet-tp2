@@ -9,12 +9,12 @@
 import Foundation
 
 let countries = [
-    Country(isoCode: "at", name: "Austria", continent:"Asie"),
+    Country(isoCode: "at", name: "Austria", continent:"Océanie"),
     Country(isoCode: "be", name: "Belgium", continent:"Europe"),
-    Country(isoCode: "de", name: "Germany",continent:"Europe"),
-    Country(isoCode: "el", name: "Greece",continent:"Europe"),
-    Country(isoCode: "fr", name: "France",continent:"Europe"),
-    Country(isoCode: "ci", name: "Côte d'ivoire",continent:"Afrique"),
-    Country(isoCode: "ha", name: "Haïti",continent:"Amerique"),
-    Country(isoCode: "ma", name: "Maroc",continent:"Afrique"),
+    Country(isoCode: "de", name: "Germany", continent:"Europe"),
+    Country(isoCode: "el", name: "Greece", continent:"Europe"),
+    Country(isoCode: "fr", name: "France", continent:"Europe"),
+    Country(isoCode: "ci", name: "Côte d'ivoire", continent:"Afrique"),
+    Country(isoCode: "ha", name: "Haïti", continent:"Amerique"),
+    Country(isoCode: "ma", name: "Maroc", continent:"Afrique"),
 ]
